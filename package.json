@@ -10,5 +10,8 @@
     "test": "mocha"
   },
   "author": "Ibrahim Tonifarah",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^6.1.4"
+  }
 }
