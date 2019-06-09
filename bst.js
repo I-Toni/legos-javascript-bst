@@ -14,6 +14,22 @@ function show() {
 
 function BST() {
   this.root = null;
+  this.left = left;
+  this.insert = insert;
+}
+
+function BST2() {
+  this.root = null;
+  this.insert = insert;
+}
+
+function BST3() {
+  this.root = null;
+  this.insert = insert;
+}
+
+function BST4() {
+  this.root = null;
   this.insert = insert;
 }
 
