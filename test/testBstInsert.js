@@ -1,12 +1,10 @@
 var assert = require('assert');
 var lego = require('../legos');
 var bst = require('../bst');
-var bst2 = require('../bst2');
-
 
 const Brick = lego.Brick;
 const BST = bst.BST;
-const BST2 = bst2.BST2;
+
 
 
 
@@ -22,7 +20,7 @@ describe('Add brick0 to BST', function(){
   });
 });
 
-var bstLeft = new BST2();
+var bstLeft = new BST();
 var brick1 = new Brick(2, 'blue');
 
 describe('Add brick0 and brick1 to BST2', function(){
