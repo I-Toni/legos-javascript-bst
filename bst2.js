@@ -1,6 +1,5 @@
 module.exports.Node = Node;
-module.exports.BST = BST;
-
+module.exports.BST2 = BST2;
 
 function Node(data, left, right) {
   this.data = data;
@@ -13,10 +12,11 @@ function show() {
   return this.data;
 }
 
-function BST() {
+function BST2() {
   this.root = null;
   this.insert = insert;
 }
+
 
 function insert(data) {
   var n = new Node(data, null, null);

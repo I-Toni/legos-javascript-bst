@@ -1,9 +1,11 @@
 var assert = require('assert');
 var lego = require('../legos');
 var bst = require('../bst');
+var bst2 = require('../bst2');
 
 const Brick = lego.Brick;
 const BST = bst.BST;
+const BST2 = bst2.BST2;
 
 
 var bst = new BST();
@@ -18,16 +20,19 @@ describe('Add brick0 to BST', function(){
   });
 });
 
+var bstLeft = new BST2();
 var brick1 = new Brick(2, 'blue');
 
-/**
-describe('Add brick0 brick1 to BST', function(){
-  /**root plus a left child
-  it('brick0 should have same data as left child of root', function() {
+describe('Add brick0 and brick1 to BST2', function(){
+  /**root plus a left child*/
+  it('brick1 should have same data as left child of root', function() {
+    bstLeft.insert(brick0);
+    bstLeft.insert(brick1);
     assert.equal(bst.root.left, brick1);
   });
 });
 
+/**
 var brick2 = new Brick(5, 'blue');
 describe('Add brick0 and brick2 to BST', function(){
   /**root plus a right child
