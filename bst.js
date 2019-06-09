@@ -14,7 +14,6 @@ function show() {
 
 function BST() {
   this.root = null;
-  this.left = left;
   this.insert = insert;
 }
 
