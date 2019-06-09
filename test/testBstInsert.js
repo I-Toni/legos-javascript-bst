@@ -6,14 +6,14 @@ const Brick = lego.Brick;
 const BST = bst.BST;
 
 
-
+var bst = new BST();
+var brick0 = new Brick(4, 'blue');
 describe('Add brick0 to BST', function(){
   /**get BSTs root node via root field,
   then data field should be the same as the brick object
   */
   it('brick0 should have same data as root', function() {
-    var bst = new BST();
-    var brick0 = new Brick(4, 'blue');
+    bst.insert(brick0);
     assert.equal(bst.root.data, brick0);
   });
 });
@@ -45,5 +45,5 @@ describe('Add brick0, brick1 and brick2 to BST', function(){
 });
 
 */
-*/
+
 
