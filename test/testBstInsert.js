@@ -56,4 +56,32 @@ describe('Add brick0, brick1 and brick2 to BST', function(){
 });
 
 
+var bstGeneralCase = new BST();
+var brick24 = new Brick(24, 'blue');
+var brick10 = new Brick(10, 'blue');
+var brick30 = new Brick(30, 'blue');
+var brick5 = new Brick(5, 'blue');
+var brick12 = new Brick(12, 'blue');
+var brick27 = new Brick(27, 'blue');
+var brick50 = new Brick(50, 'blue');
+describe('A general case of 7 nodes to BST', function(){
+  /**test position of 7 bricks in BST*/
+  it('Should be all located in the appropriate nodes', function() {
+    bstGeneralCase.insert(brick24);
+    bstGeneralCase.insert(brick10);
+    bstGeneralCase.insert(brick30);
+    bstGeneralCase.insert(brick5);
+    bstGeneralCase.insert(brick12);
+    bstGeneralCase.insert(brick27);
+    bstGeneralCase.insert(brick50);
+    assert.equal(bstGeneralCase.root.data, brick24);
+    assert.equal(bstGeneralCase.root.left.data, brick10);
+    assert.equal(bstGeneralCase.root.right.data, brick30);
+    assert.equal(bstGeneralCase.root.left.left.data, brick5);
+    assert.equal(bstGeneralCase.root.left.right.data, brick12);
+    assert.equal(bstGeneralCase.root.right.left.data, brick27);
+    assert.equal(bstGeneralCase.root.right.right.data, brick50);
+  });
+});
+
 
