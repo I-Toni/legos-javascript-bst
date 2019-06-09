@@ -43,15 +43,17 @@ describe('Add brick0 and brick2 to BST', function(){
   });
 });
  
-/**
+var bstLeftRight = new BST();
 describe('Add brick0, brick1 and brick2 to BST', function(){
-  /**root plus a left and right child
+  /**root plus a left and right child*/
   it('brick1 and brick2 should have same data as left and right child of root', function() {
-    assert.equal(bst.root.left, brick1);
-    assert.equal(bst.root.right, brick2);
+    bstLeftRight.insert(brick0);
+    bstLeftRight.insert(brick1);
+    bstLeftRight.insert(brick2);
+    assert.equal(bstLeftRight.root.left.data, brick1);
+    assert.equal(bstLeftRight.root.right.data, brick2);
   });
 });
 
-*/
 
 
