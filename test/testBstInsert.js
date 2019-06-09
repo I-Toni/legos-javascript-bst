@@ -3,9 +3,11 @@ var lego = require('../legos');
 var bst = require('../bst');
 var bst2 = require('../bst2');
 
+
 const Brick = lego.Brick;
 const BST = bst.BST;
 const BST2 = bst2.BST2;
+
 
 
 var bst = new BST();
@@ -32,15 +34,18 @@ describe('Add brick0 and brick1 to BST2', function(){
   });
 });
 
-/**
+var bstRight = new BST();
 var brick2 = new Brick(5, 'blue');
 describe('Add brick0 and brick2 to BST', function(){
-  /**root plus a right child
+  /**root plus a right child*/
   it('brick2 should have same data as right child of root', function() {
-    assert.equal(bst.root.right, brick2);
+    bstRight.insert(brick0);
+    bstRight.insert(brick2);
+    assert.equal(bstRight.root.right.data, brick2);
   });
 });
  
+/**
 describe('Add brick0, brick1 and brick2 to BST', function(){
   /**root plus a left and right child
   it('brick1 and brick2 should have same data as left and right child of root', function() {
