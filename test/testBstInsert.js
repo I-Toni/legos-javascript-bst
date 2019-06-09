@@ -28,7 +28,7 @@ describe('Add brick0 and brick1 to BST2', function(){
   it('brick1 should have same data as left child of root', function() {
     bstLeft.insert(brick0);
     bstLeft.insert(brick1);
-    assert.equal(bst.root.left, brick1);
+    assert.equal(bstLeft.root.data, brick1);
   });
 });
 
