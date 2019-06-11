@@ -16,6 +16,7 @@ function show() {
 function BST() {
   this.root = null;
   this.insert = insert;
+  this.find = find;
 }
 
 function insert(data) {
@@ -44,4 +45,17 @@ function insert(data) {
       }
     }
   }
+}
+
+function find(data) {
+  var current = this.root;
+  while (current && current.data != data) {
+    if (data < current.data) {
+      current = current.left;
+    }
+    else {
+      current = current.right;
+    }
+  }
+  return current;
 }
