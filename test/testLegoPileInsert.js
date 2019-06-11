@@ -39,3 +39,19 @@ describe('Insert one brick of each color into the appropriate BST', function(){
     assert.equal(legoPile2.dict["white"].root.data, brick5);
   });
 });
+
+var legoPile3 = new LegoPile();
+var brick100 = new Brick(4, 'red');
+var brick200 = new Brick(3, 'red');
+var brick300 = new Brick(5, 'red');
+describe('Insert several bricks of red into the appropriate BST', function(){
+  it('brick100 should be root of red, brick200 should be in left node of root, brick300 should be in right node of root', function() {
+    legoPile3.insert(brick100);
+    legoPile3.insert(brick200);
+    legoPile3.insert(brick300);
+    assert.equal(legoPile3.dict["red"].root.data, brick100);
+    assert.equal(legoPile3.dict["red"].root.left.data, brick200);
+    assert.equal(legoPile3.dict["red"].root.right.data, brick300);
+  });
+});
+
