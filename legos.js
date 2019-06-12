@@ -29,6 +29,13 @@ function LegoPile() {
     }
    };
    this.hasBrick = hasBrick;
+   this.count = {
+    var totalBricks = 0;
+    for (var key in this.dict) {
+      total += this.dict[key].count;
+    }
+    return total;
+   };
 }
 
 function hasBrick(brick) {
