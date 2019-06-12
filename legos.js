@@ -28,10 +28,10 @@ function LegoPile() {
       }
     }
    };
-   this.hasbrick = hasbrick;
+   this.hasBrick = hasBrick;
 }
 
-function hasbrick(brick) {
+function hasBrick(brick) {
   for (var key in this.dict) {
     if (brick.color === this.dict[key]) {
       if (brick === this.dict[key].find(brick)) {

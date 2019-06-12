@@ -55,3 +55,9 @@ describe('Insert several bricks of red into the appropriate BST', function(){
   });
 });
 
+describe('Test to return True if Brick in LegoPile, and false otherwise', function(){
+  it('(brick100) should be in legoPile and hasBrick should return true ', function() {
+    assert.equal(legoPile3.hasBrick(brick100), true);
+  });
+});
+
