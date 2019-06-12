@@ -66,4 +66,18 @@ describe('Test to return True if Brick in LegoPile, and false otherwise', functi
   });
 });
 
+/**Test BST#count returns the number of node objects in the BST*/
+var bst = new BST();
+var brick1000 = new Brick(5, 'blue');
+var brick2000 = new Brick(3, 'blue');
+var brick3000 = new Brick(6, 'blue');
+describe('Test BST count returns appropriate number of node objects in BST', function(){
+  it('Should return 3 after inserting 3 bricks of same color', function() {
+    bst.insert(brick1000);
+    bst.insert(brick2000);
+    bst.insert(brick3000);
+    assert.equal(bst.count(), 3);
+  });
+});
+
 

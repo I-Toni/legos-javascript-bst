@@ -29,12 +29,12 @@ function LegoPile() {
     }
    };
    this.hasBrick = hasBrick;
-   this.count = {
+   this.count = function() {
     var totalBricks = 0;
     for (var key in this.dict) {
-      total += this.dict[key].count;
+      totalBricks += this.dict[key].count;
     }
-    return total;
+    return totalBricks;
    };
 }
 
