@@ -50,7 +50,7 @@ function insert(data) {
 function find(data) {
   var current = this.root;
   while (current && current.data != data) {
-    if (data < current.data) {
+    if (data.size < current.data.size) {
       current = current.left;
     }
     else {
