@@ -17,6 +17,16 @@ function BST() {
   this.root = null;
   this.insert = insert;
   this.find = find;
+  this.countSubtree = countSubtree;
+  this.count = 0;
+}
+
+function countSubtree(node) {
+  if (node !== null) {
+    countSubtree(node.left);
+    this.count++;
+    countSubtree(node.right);
+  }
 }
 
 function insert(data) {
