@@ -34,7 +34,9 @@ function LegoPile() {
 function hasBrick(brick) {
   for (var key in this.dict) {
     if (brick.color === key) {
-      if (brick === this.dict[key].find(brick).data) {
+      if (this.dict[key].find(brick) === null) {
+        return false;
+      } else if (brick === this.dict[key].find(brick).data) {
         return true;
       }
     }

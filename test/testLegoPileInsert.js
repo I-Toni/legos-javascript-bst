@@ -55,9 +55,15 @@ describe('Insert several bricks of red into the appropriate BST', function(){
   });
 });
 
+/**hasBrick test to find out if LegoPile contains a certain kind of brick*/
 describe('Test to return True if Brick in LegoPile, and false otherwise', function(){
   it('(brick100) should be in legoPile and hasBrick should return true ', function() {
     assert.equal(legoPile3.hasBrick(brick100), true);
   });
+  it('(brick123) should be not be in legoPile and hasBrick should return false ', function() {
+    var brick123 = new Brick(5, 'red');
+    assert.equal(legoPile3.hasBrick(brick123), false);
+  });
 });
+
 
