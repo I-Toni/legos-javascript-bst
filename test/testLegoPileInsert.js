@@ -89,3 +89,21 @@ describe('Test BST count returns appropriate number of node objects in BST', fun
 });
 
 
+/**Test LegoPile#count returns the total number of node objects in the legoPile*/
+describe('Test LegoPile count returns appropriate total number of node objects in LegoPile', function(){
+  it('(legoPile2) Should return 7 after inserting 7 bricks with different colors and calling count method', function() {
+    assert.equal(legoPile2.count(), 6);
+  });
+  it('(legoPile3) Should return 3 after inserting 3 bricks with different colors and calling count method', function() {
+    assert.equal(legoPile3.count(), 3);
+  });
+});
+
+
+
+
+
+
+
+
+

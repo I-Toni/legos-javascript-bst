@@ -32,7 +32,7 @@ function LegoPile() {
    this.count = function() {
     var totalBricks = 0;
     for (var key in this.dict) {
-      totalBricks += this.dict[key].count;
+      totalBricks += this.dict[key].count();
     }
     return totalBricks;
    };
