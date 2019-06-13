@@ -16,23 +16,19 @@ function show() {
 function BST() {
   this.root = null;
   this.insert = insert;
-  this.find = find;
-  this.countSubtree = countSubtree;
-  this.count = count;
   this.bricks = 0;
-}
-
-function countSubtree(node) {
-  if (node !== null) {
-    countSubtree(node.left);
-    this.bricks++;
-    countSubtree(node.right);
-  }
-}
-
-function count() {
-  this.countSubtree(this.root);
-  return this.bricks;
+  this.find = find;
+  this.countSubtree = function(node) {
+    if (node !== null) {
+      this.countSubtree(node.left);
+      this.bricks++;
+      this.countSubtree(node.right);
+    } 
+  };
+  this.count = function() {
+    this.countSubtree(this.root);
+    return this.bricks;
+  };
 }
 
 function insert(data) {
